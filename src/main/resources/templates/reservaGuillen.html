@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Reservas</h1>
+        <form th:action="@{/}" th:object="${reserva}" method="post">
+            <div class="form-group">
+                <label for="nombre">Nombre: </label>
+                <input type="text" id="" name="nombre" th:field="*{nombre}">
+            </div>
+            <div class="form-group">
+                <label for="apellido">Apellido: </label>
+                <input type="text" id="" name="apellido" th:field="*{apellido}">
+            </div>
+            <div class="form-group">
+                <label for="carrera">Carrera: </label>
+                <select name="idcarrera" id="">
+                    <option value="0">Seleccione</option>
+                    <option th:each="c : ${lCarreras}" th:value="${c.idcarrera}"
+						th:text="${c.descripcion}"></option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="fecha">Fecha: </label>
+                <input type="date" id="" name="fchregistro" th:field="*{fchregistro}">
+            </div>
+            <div>
+            	<button type="submit">Agregar</button>
+            	<button type="reset">Limpiar</button>
+            	<button type="">Listar</button>
+            	<button type="">PDF</button>
+            </div>
+        </form>
+        <div th:if="${msjError} != null" class="" role="alert" th:text="${msjError}"></div>
+		<div th:if="${msjSuccess} != null" class="" role="alert" th:text="${msjSuccess}"></div>
+    </div>
+</body>
+</html>

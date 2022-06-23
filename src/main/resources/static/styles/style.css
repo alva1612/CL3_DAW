@@ -1,0 +1,43 @@
+* {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+	background-color: cadetblue;
+}
+.container {
+background: rgba( 255, 255, 255, 0.5 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+display:grid;
+grid-template-columns: repeat(1);
+gap:20px;
+text-align: center;
+max-width: 500px;
+margin: 0 auto;
+}
+
+form {
+	display: grid;
+	grid-template-columns: repeat(1);
+	justify-content: center;
+	gap: 5px;
+	margin-bottom: 20px;
+}
+input, select {
+	max-width: 190px;
+}
+button {
+background: rgba( 255, 255, 255, 0.8 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4.5px );
+-webkit-backdrop-filter: blur( 4.5px );
+margin-top: 10px;
+}
+button:hover {
+	cursor:pointer;
+	background-color: burlywood;
+	transition: 0.5s;
+}

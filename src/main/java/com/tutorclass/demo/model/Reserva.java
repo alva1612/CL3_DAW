@@ -1,4 +1,4 @@
-package com.tutorclass.model;
+package com.tutorclass.demo.model;
 
 import java.sql.Date;
 
@@ -12,7 +12,7 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name="tb_carreras")
+@Table(name="tb_reserva")
 public class Reserva {
 	@Id
 	private int codigo;
